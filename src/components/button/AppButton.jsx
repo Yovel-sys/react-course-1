@@ -1,15 +1,8 @@
- 
- 
-export const AppButton=( {
-    className = '',
-    ...props
-    }
-
-)=> { 
-    return <button  className= {`bg-amber-300 p-2  rounded  hover:bg-blue-400 ${className} ` 
-    }  {...props}
-
-    >
-        
-    </button>
-}
+export const AppButton = ({className = "", ...props}) => {
+  return (
+    <button
+      className={`bg-amber-300 p-2  rounded  hover:bg-blue-400 ${className} `}
+      {...props}
+    ></button>
+  );
+};
