@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import {useEffect, useMemo, useState} from "react";
 
 import "./IceCreamResult.css";
-import { Toppings } from "./IceResultVisualToppings";
-import { IceCreamTaste } from "../../models/IcecreamTaste";
+import {Toppings} from "./IceResultVisualToppings";
+import {IceCreamTaste} from "../../models/IcecreamTaste";
 
-export const IceCreamResult = ({ serveType, taste, topping }) => {
+export const IceCreamResult = ({serveType, taste, topping}) => {
   const [animationState, setAnimationState] = useState("up");
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export const IceCreamResult = ({ serveType, taste, topping }) => {
           className={`bg-amber-400 ${
             animationState === "down" ? "top-8" : "-top-1"
           }     transition-all  w-22 h-22 rounded-full relative  ring-1 ring-slate-400  `}
-          style={{ backgroundColor: scoopColor(taste) }}
+          style={{backgroundColor: scoopColor(taste)}}
         >
           {memoToppings}
         </div>
